@@ -35,7 +35,7 @@ def search_bing(driver, query):
     bing_results = []
 
     # 等待搜索结果加载
-    driver.implicitly_wait(3)
+    driver.implicitly_wait(10)
 
     links = driver.find_elements(By.CSS_SELECTOR, 'a')
     for link in links:
