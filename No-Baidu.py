@@ -46,7 +46,7 @@ def search_bing(driver, query):
         except Exception as e:
             print(f"Error extracting Bing link: {e}")
             continue
-    return bing_results
+    return list(set(bing_results))  # 去重并返回
 
 def crawl_and_display_results(query):
     driver = initialize_driver()
